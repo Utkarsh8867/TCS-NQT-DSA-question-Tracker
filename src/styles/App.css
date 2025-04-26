@@ -1,0 +1,410 @@
+/* =========================================================================== */
+/* ================================ CSS RESET ================================ */
+/* =========================================================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================================================================== */
+/* ================================ MAIN STYLES ============================== */
+/* =========================================================================== */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  margin: 20px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* ================================ solution link ================================ */
+
+a.solution-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+a.solution-link:hover {
+  background-color: #e9f5ff;
+  color: #0056b3;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+a.solution-link svg {
+  width: 16px;
+  height: 16px;
+  fill: #007bff;
+  transition: fill 0.3s ease;
+}
+
+a.solution-link:hover svg {
+  fill: #0056b3;
+}
+
+/* ================================ checkbox ================================ */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+  background-color: #f1f1f1;
+  border-color: #0056b3;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 8px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+input[type="checkbox"]:disabled {
+  background-color: #e0e0e0;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ================================ RESET button ================================ */
+
+.reset-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.reset-button:hover {
+  background-color: #ff3b3b;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+}
+
+/* ================================ Info Section ================================ */
+.info-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container h2 {
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.info-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.info-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.info-container li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* ================================ Custom Scrollbars ============================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* ================================ Mobile First ============================ */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .info-container {
+    padding: 15px;
+  }
+
+  .info-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .info-container p,
+  .info-container li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================ Tablet and Larger Screens ============================ */
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+}

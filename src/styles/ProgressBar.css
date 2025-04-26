@@ -1,0 +1,42 @@
+/* ================================ Progress Bar ============================ */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 1s ease-in-out;
+  position: relative;
+  border-radius: 10px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.progress-container::before {
+  content: "Progress:";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-text::after {
+  content: "%";
+}
